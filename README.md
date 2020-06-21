@@ -5,7 +5,7 @@ This is my SoftEther autoinstaller. This script will *hopefully* make your life 
 To get started, all you have to do is copy/paste the provided code for your OS. The script will handle everything else for you. Refer to the [Quick Start Guide](https://github.com/icoexist/softether-autoinstall#quick-start-guide) if you need to get set up quickly. Also refer to the [Commands List](https://github.com/icoexist/softether-autoinstall#commands-list) should you need them.
 
 ### Install & Configure
-* [Supported Operating Systems](https://github.com/icoexist/softether-autoinstall#supported-operating-systems-64-bit-only)     
+* [Supported Operating Systems](https://github.com/metallicats/softether-autoinstall#supported-operating-systems-64-bit-only)     
 * [Open Ports for SoftEther VPN](https://github.com/icoexist/softether-autoinstall#open-ports-for-softether-vpn)
 * [Using Local Bridge on SoftEther VPN](https://github.com/icoexist/softether-autoinstall#Using-Local-Bridge-Setting-on-SoftEther-VPN)
 
@@ -23,12 +23,12 @@ To get started, all you have to do is copy/paste the provided code for your OS. 
 ## Supported Operating Systems (64-bit only)
 #### Ubuntu 16.04 LTS +
 ```bash
-wget -O se-install https://raw.githubusercontent.com/icoexist/softether-autoinstall/master/ubuntu/se-install-ubuntu.bash && chmod +x se-install && ./se-install
+wget -O se-install https://raw.githubusercontent.com/metallicats/softether-autoinstall/master/ubuntu/se-install-ubuntu.bash && chmod +x se-install && ./se-install
 ```
 
 #### CentOS 7 (Currently depreciated, no longer in development)
 ```bash
-curl -o se-install https://raw.githubusercontent.com/icoexist/softether-autoinstall/master/centos/x64/se-install-centos.bash && chmod 770 se-install && ./se-install
+curl -o se-install https://raw.githubusercontent.com/metallicats/softether-autoinstall/master/centos/x64/se-install-centos.bash && chmod 770 se-install && ./se-install
 ```
 ## Open Ports for SoftEther VPN
 ### Ubuntu
