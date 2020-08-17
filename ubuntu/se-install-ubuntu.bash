@@ -94,7 +94,7 @@ do
         break
             ;;
         "No")
-        wget -O vpnserver-init https://raw.githubusercontent.com/metallicats/softether-autoinstall/master/vpnserver-init > /dev/null 2>&1
+        wget -O vpnserver-init https://raw.githubusercontent.com/icoexist/softether-autoinstall/master/vpnserver-init > /dev/null 2>&1
         mv vpnserver-init /etc/init.d/vpnserver
         chmod 755 /etc/init.d/vpnserver
         printf "\nSystem daemon created. Registering changes...\n\n"
