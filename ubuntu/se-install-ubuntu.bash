@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 clear
 
 # User confirmation
-read -rep $'!!! IMPORTANT !!!\n\nThis script will remove SoftEther if it has been previously installed. Please backup your config file via the GUI manager or copy it from /opt/vpnserver/ if you are upgrading.\n\nThis will download and compile SoftEther VPN on your server. Are you sure you want to continue? [y/N] ' response
+read -rep $'!!! IMPORTANT !!!\n\nThis script will remove SoftEther if it has been previously installed. Please backup your config file via the GUI manager or copy it from /opt/vpnserver/ if you are upgrading.\n\nThis will download and compile SoftEther VPN on your server. PLEASE DO NOT USE DNSMASQ if installinf for Getfoxie VPN's. Are you sure you want to continue? [y/N] ' response
 case $response in
 [yY][eE][sS]|[yY])
 
@@ -110,7 +110,9 @@ do
         Proxy_Port='7835'
         echo -e "acl VPN dst $(wget -4qO- http://ipinfo.io/ip)/32\nhttp_access allow VPN\nhttp_access deny all\nhttp_port 0.0.0.0:$Proxy_Port\nacl all src 0.0.0.0/0.0.0.0\nno_cache deny all\ndns_nameservers 1.1.1.1 1.0.0.1\nvisible_hostname localhost" > /etc/squid/squid.conf
         service squid restart
+        printf "\nSofether successfully installed.\n\n"
         printf "\nSquid successfully installed.\n\n"
+        printf "\nEdited for use with Getfox.ie VPN services.\n\n"
         break
             ;;
         "Quit")
