@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 clear
 
 # User confirmation
-read -rep $'!!! IMPORTANT !!!\n\nThis script will remove SoftEther if it has been previously installed. Please backup your config file via the GUI manager or copy it from /opt/vpnserver/ if you are upgrading.\n\nThis will download and compile SoftEther VPN on your server. PLEASE DO NOT USE DNSMASQ if installinf for Getfoxie VPN's. Are you sure you want to continue? [y/N] ' response
+read -rep $'!!! IMPORTANT !!!\n\nThis script will remove SoftEther if it has been previously installed. Please backup your config file via the GUI manager or copy it from /opt/vpnserver/ if you are upgrading.\n\nThis will download and compile SoftEther VPN on your server. PLEASE DO NOT USE DNSMASQ if installing for Getfoxie VPN's. Are you sure you want to continue? [y/N] ' response
 case $response in
 [yY][eE][sS]|[yY])
 
