@@ -107,6 +107,7 @@ do
         printf "\n${RED}!!! IMPORTANT !!!${NC}\n\nTo configure the server, use the SoftEther VPN Server Manager located here: http://bit.ly/2D30Wj8 or use ${RED}sudo /opt/vpnserver/vpncmd${NC}\n\n${RED}!!! UFW is not enabled with this script !!!${NC}\n\nTo see how to open ports for SoftEther VPN, please go here: http://bit.ly/2JdZPx6\n\nNeed help? Feel free to join the Discord server: https://icoexist.io/discord\n\n"
         printf "\nPress anything to Install Squid.\n\n"
         apt install squid -y
+        printf "\Set Port.\n\n"
         Proxy_Port='7835'
         echo -e "acl VPN dst $(wget -4qO- http://ipinfo.io/ip)/32\nhttp_access allow VPN\nhttp_access deny all\nhttp_port 0.0.0.0:$Proxy_Port\nacl all src 0.0.0.0/0.0.0.0\nno_cache deny all\ndns_nameservers 1.1.1.1 1.0.0.1\nvisible_hostname localhost" > /etc/squid/squid.conf
         service squid restart
